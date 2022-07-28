@@ -227,6 +227,7 @@ key값 지정
 2. Key로 id를 사용하는 경우   
 3. key로 index를 사용하는 경우  
 default로 id가 없는 경우에만 사용 
+
 ### map()
 - 여러 개의 component를 렌더링 하기 위해 사용
 - 배열에 들어있는 각 변수에 어떤 처리를 한 뒤 return하는 것
@@ -243,3 +244,6 @@ ReactDOM.render(
 );
 ```
 
+### Quiz-2
+1. 고유한 값을 나타내는 key값은 서로 다른 List끼리도 중복된 값이 있으면 안 된다. (O/X)
+2. inline if문의 False && expression에서 expression이 실행되지 않는 이유는?
