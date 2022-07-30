@@ -121,3 +121,39 @@ React Component에 전달할 정보를 담고있는 자바스크립트 객체이
 
 - Read-Only: 값을 변경할 수 없다. 값을 변경하기 위해서는 새로운 값을 컴포넌트에 전달해 새로운 Element를 생성한다.
 - 모든 React Component는 Props를 직접 바꿀 수 없고, 같은 Props에 대해서는 항상 같은 결과를 보여야 한다.
+
+### Function Component
+
+props를 받아 React Element를 return하는 함수 형태의 컴포넌트
+
+간결한 코드가 장점
+
+### Class Component
+
+React.Component를 상속받아 사용 → React.Component를 상속받았기 때문에 결과적으로 Class Component 또한 React Component이다.
+
+Component의 이름은 항상 대문자로 시작해야 한다.
+
+→ 소문자로 시작 시, React는 컴포넌트가 아니라 DOM태그로 인식
+
+### Component 합성
+
+Component를 여러 개 합쳐 Component를 만드는 것
+
+### Component 추출
+
+큰 컴포넌트에서 일부를 추출해 새로운 컴포넌트를 만드는 것
+
+→ 재사용성과, 개발속도 상승
+
+### State
+
+React Component의 변경 가능한 데이터로 개발자가 정의해서 사용한다.
+
+JavaScript 객체
+
+정의된 state는 직접 수정하면 안된다.
+
+### LifeSycle
+
+Component는 계속 존재하는 것이 아니라 시간의 흐름에 따라 생성되고 업데이트 되다가 사라진다.

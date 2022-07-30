@@ -1,289 +1,239 @@
-React
-	Meta에서 개발한 오픈 소스 자바스크립트 라이브러리
-모듈형 개발이기 때문에 생산성이 높음 (부품을 자유롭게 떼었다 붙였다 할 수 있는 형태)
-상호작용이 많은 UI를 만들 때 생기는 어려움을 줄여줌(SPA)
-Virtual DOM을 활용하여 리렌더링이 잦은 동적인 모던 웹에서 엄청나게 빠른 퍼포먼스를 내는게 가능
-컴포넌트 기반
-	웹 UI를 작은 컴포넌트 단위로 구성
-컴포넌트는 다른 프로젝트에서도 재사용할 수 있고, 컴포넌트 캡슐화(정보 은닉)와 확장이 가능해 개발이 유연해지는 장점이 있다
-프레임워크가 아니라 라이브러리인지라 다른 프레임워크에 간편하게 붙여서 사용하는 것도 가능
-프레임워크
-소프트웨어 어플리케이션이나 솔루션의 개발을 수월하게 하기 위해 소프트웨어의 구체적 기능들에 해당하는 부분의 설계와 구현을 재사용 가능하도록 협업화된 형태로 제공하는 소프트웨어 환경
-	어플리케이션 개발을 위한 뼈대를 제공해주는 역할
-라이브러리
-	소프트웨어를 개발할 때 프로그램이 사용하는 비휘발성 자원의 집합
-	미리 작성된 코드, 변수, 클래스가 포함될 수 있음
-개발하는데 필요한 것들을 모아둔 도구들의 나열로 필요할 때 호출하는 방식
-프레임 워크 vs. 라이브러리
-	flow에 대한 제어 권한이 어디에 있느냐의 차이
-프레임 워크 : 전체적인 흐름을 자체적으로 가지고 있고 프로그래머가 그 안에 필요한 코드를 작성
-라이브러리 : 사용자가 흐름에 대한 제어를 하며 필요한 상황에 가져다 씀
-	
-컴포넌트
-		class형과 함수형이 존재
-		React를 구성하고 있는 조각 하나하나를 말함
-react는 사용자에게 보여지는 UI 요소를 컴포넌트 단위로 구분하여 구현
-	함수형 컴포넌트
-function 으로 정의하고 return 문에 jsx 코드를 반환
-	클래스형 컴포넌트
-class로 정의하고 render( ) 함수에서 jsx 코드를 반환
+postfix와 prefix의 결과값이다
 
-state(상태)를 사용할 수 있으며 각종 Life cycle 및 Method를 이용하여 컴포넌트가 Mount 혹은 Unmount 될 때 추가 작업을 수행시키는 등 조작을 할 수 있음. 하지만 Hook이 등장한 이후부터는 위 기능들을 함수형 컴포넌트에서도 대부분 구현이 가능하게 되었습니다.
-	
-	State
-		컴포넌트가 관리하는 속성값(데이터)
-		한 컴포넌트에서만 사용하는 정보를 넣고 생성, 수정하는 데이터
-		함수 내에 선언된 변수처럼 컴포넌트 안에서 관리됨
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92cc2709-7fe2-4337-b1df-cba9237ab672/Untitled.png)
 
-	Hook
-함수 컴포넌트에서 State와 Life cycle을 연동(hook into)할 수 있게 해주는 함수
-		class를 작성하지 않고도 state와 다른 React의 기능들을 사용할 수 있게 해줌
-	
-	Virtual DOM
-React는 DOM을 직접적으로 조작하지 않고 데이터가 변화할 때 변경사항이 적용된 Virtual DOM을 만듦	
-	실제 DOM 변화를 최소화 시켜주는 역할
-뷰에 변화가 있다면, 그 변화가 실제 DOM에 적용되기 전에 Virtual DOM에 적용시키고 최종 결과만 실제 DOM에 전달
-	따라서 20개의 변화가 있다면 Virtual DOM은 변화된 부분만 가려내어 실제 DOM에 전달하고 실제 DOM은 그 변화를 1회로 인식하여 단 한번의 렌더링 과정만 거치게 됨
+이진 논리 연산자이다
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2225f264-6a84-4a61-a399-f5c739f6c4a0/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7706a056-3a67-4776-ae1b-40b5dd3b62b7/Untitled.png)
+
+삼항 연산자이다
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a927feb-aeb9-44b1-b9b0-7f5a82a79c68/Untitled.png)
+
+node.js는 js의 환경
+
+DOM = 문서 객체 모델
+
+virtual DOM 가상 DOM
+
+업데이트 해야할 최소한의 부분만 변경하여 render에 도움을 줌
+
+React는 component를 모아서 개발하는 것
+
+재사용성을 가진다
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c8b84bc-722a-4e60-8c00-40dc41ab1a74/Untitled.png)
+
+div root가 Root DOM Node (최상위 노드) 이다
+
+npm start : 앱을 실행시킨다 (react app경로 위에서 시작해야 함)
+
+localhost:3000으로 실행시킨다
+
+localhost는 현재 내가 사용하고 있는 컴퓨터
 
 JSX
-	Java Script eXtension
-	XML을 기반
-	React에서 HTML을 표현할 때, JSX를 사용
-	빌드 시 Babel에 의해 자바스크립트로 변환
-	자바스크립트 코드를 HTML처럼 표현할 수 있기 때문에 용이한 개발이 가능
-
-SPA
-	Single Page Application
-	한개의 페이지로 구성된 웹서비스
-기존페이지에 컴포넌트화된 서브 페이지나 적절한 자원, 데이터 등 만을 넘겨주어 Client 상에 Rendering이 이루어지는(CSR) 방식으로 동작
-새로운 메뉴를 누르거나 신규등록, 데이터 삭제 등의 기능을 할 때, 새롭게 페이지가 새로고침되지않고, 필요한 리소스만 받아와 동적으로 빠르게 적용
-데이터를 받아올 때만 서버와 통신함
-페이지 리로딩 없이 화면을 갱신함
-장점
-	자연스러운 페이지 이동
-	필요한 리소스만 부분적으로 로딩
-	컴포넌트별 개발이 용이
-	로컬 데이터를 효과적으로 캐시에 임시 저장 가능
-	서버의 사용없이도 개발을 시작할 수 있음
-단점
-	초기 구동 속도가 느림
-처음 웹 어플리케이션에 필요한 모든 정적 리소스를 한번에 받아옴
-	SEO 관점에서 불리
-	JS를 모르면 구현이 불가능
-FaceBook, Google 등이 사용함
-
-CSR
-최초에 한번 서버에서 전체 페이지를 로딩하여 보여주고 이후에는 사용자의 요청이 올 때마다, 리소스를 서버에서 제공한 후 클라이언트가 해석하고 렌더링하는 방식이다. SEO가 어렵다는 큰 단점이 있다.
-
-MPA
-	Multi Page application
-서버에 요청이 있을때마다 신규페이지를 불러와 그리는 방식(항상 전체 페이지가 다시 렌더링 됨)
-여러 개(multi)의 Page로 구성된 application 으로 PHP, JSP 등의 서버사이드 언어로 서버 사이드 렌더링 (SSR)이 이루어진다
-html로 작성된 여러 페이지들을 배포하여 서비스하는 경우가 MPA에 해당
-MPA는 새로운 페이지를 요청할 때마다 페이지 리소스가 다운로드 되고,
-그에 맞춰 전체 페이지를 다시 렌더링
-장점
-		SEO (Search Engine Optimization, 검색 엔진 최적화) 관점에서 유리
-			검색엔진이 페이지를 크롤링하기에 적합
-		완성된 형태의 HTML 파일을 서버로부터 전달받음
-		SPA에 비해 첫 페이지 로딩이 매우 짧음
-	단점
-		페이지를 이동할떄마다 리로딩 발생
-		프론트엔드와 백엔드가 결합되어 있음
-			개발과 관리가 복잡하고 어려워질 수 있음
-		서버 렌더링에 따른 부하가 발생함
-		페이지 이동시 불필요한 템플릿 중복 로딩이 발생
-	Amazon, The New York Times 등이 사용함
-	전통적인 웹사이트들은 MPA형태로 서비스해옴
-
-SSR
-MPA는 페이지를 이동할 때마다 새로운 페이지를 요청한다. 모든 템플릿은 서버 연산을 통해서 렌더링하고 완성된 페이지 형태로 응답
-		이를 SSR(서버 사이드 렌더링)이라고 부름
-서버 사이드 렌더링의 장점은 SEO이다. 전통적인 MPA의 경우 브라우저에서 JavaScript 코드가 동작하기 전에도 완성된 형태의 템플릿 (HTML에 데이터가 삽입된 상태)을 서버로 부터 전달받는다. 이 때문에 검색로봇이 페이지를 크롤링하기에 매우 적합하다.
-
-Life cycle
-React Component는 탄생부터 죽음까지 여러 지점에서 개발자가 작업이 가능하도록 메서드를 오버라이딩 할 수 있게 해줌
-component의 생성, 변경, 소멸 과정
-component를 렌더링할 때(update) 어떤 작업을 처리하거나, 업데이트 전 후로어떤 작업을 처리해야 할 수도 있는데 이때 Life cycle 메소드를 사용
-Life cycle 메소드는 class형 컴포넌트에서만 사용 가능
-	함수 컴포넌트에서는 Hook을 이용하여 비슷한 처리 가능
-
-Life cycle Method
-		Mount – Update – Unmount로 나눌 수 있다
-		Mount
-			DOM이 생성되고 웹 브라우저에 나타나는 것을 말함
-			constructor  getDerivedStateFromProps  componentDidMount
-			순서로 발생함
-			constructor
-클래스 생성자. 처음 한 번만 실행되며 state 선언, props를 초기화 할 때 사용
-			getDerivedStateFromProps
-				컴포넌트가 새로운 props를 받게 됐을 때 state를 변경
-			componentDidMount
-				컴포넌트가 웹브라우저에 나타난 후 호출
-화면에 모두 그려진 후에 실행되어야 하는 이벤트 처리, 초기화, 비동기 작업 처리 등 가장 많이 활용
-		Update
-			
 
+js의 확장 문법
 
-		
-			
+js 와 xml/html을 합친 것
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b9a50f93-a2b1-47ca-8ca0-bbf8dfd421e9/Untitled.png)
 
+xml/html 코드를 js로 바꿔준다
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f277aa6f-fc3b-4861-8a52-dc1b1f022602/Untitled.png)
 
-		Unmount
-			mount의 반대 과정으로 컴포넌트를 DOM에서 제거
-			componentWillUnmount
-				컴포넌트가 웹브라우저에서 사라지기 전 호출
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/520fe726-a6f8-4b7d-b1da-f94cef1caad5/Untitled.png)
 
-사용자 정의 태그를 만드는 것과 react는 유사하다 - 이를 component라고 한다
-	가독성이 좋고
-	재사용성
-	유지보수가 좋다
+첫번 째는 type (h1같은) 또는 또다른 react component가 들어감
 
-컴포넌트
-	예를 들어 웹페이지의 header부분 전체를 TOP이라는 사용자 정의 태그안에 넣어놓고
-	본문에서 TOP라는 태그를 가져다 쓰는 것이 component를 사용한는 것과 유사한 행위
+두번째는 props(속성 (class나 style등))
 
-npm
-	node.js로 만들어진 프로그램을 쉽게 설치해주는 일종의 앱스토어
-	먼저 node.js라는 프로그램을 깔아야 한다
+마지막이 해당 element의 자식 element가 들어감
 
-react 준비하기
-1. npm으로 create-react-app 설치하기
-	Node.js prompt 들어가기
-npm install -g create-react-app 입력
-	create-react-app-V로 설치 확인이 가능
-	안되면 sudo npm install create-react-app으로 설치
+라는 파라미터를 사용함
 
-2. 개발환경 디렉토리 설정하기
-	예) 바탕화면 -> react-app 이라는 파일 만들기
-	이곳이 react가 작동할 디렉토리가 된다
-	계속해서 prompt에서 cd (만든파일)로 이동하고
-	create-react-app .  (.은 현재 파일이라는 뜻) 으로 개발환경 구축을 완료한다
+jsx 장점
 
-3. 샘플 웹app으로부터 js 코딩 시작하기
-	vscode – 만들파일의 터미널에서 npm start 을 입력하면 샘플 웹app을 만들어준다
-	이를 기반으로 수정해가면 된다
+코드가 간결해짐
 
-4. 디렉토리 구조 파악하기
-	public 디렉토리
-		index.html이 있는 곳
-			
-	      create react app 은 react로 만든 컴포넌트들이 #root안에 들어가도록 설정 해놓음
-	
+유지보수가 좋고
 
+버그를 찾기 좋고
 
+injection attacks를 방지
 
+데이터가 변환되서 들어가기에 (ex props값에 맞는 데이터를 가져와 실행시킴)
 
+xss를 방어할 수 있음
 
-src 디렉토리
-		대부분의 개발에 관한 파일들은 이곳에 들어가게 된다
-		index.js는 진입파일이다
-							로 html의 #root에 연결된다
-		
-					render에 있는 <App/>이 componet이고
-		실제 component에 대한 구현은 import를 통해서
-						(실제로는 ./App.js 이다)
-		App.js에서 이루어진다
+jsx 사용법
 
+html 코드를 쓰다가 js코드를 쓰고 싶을 때 중괄호에 넣어서 쓰면 됨
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0a57ee2-c93f-4ab0-82bf-9a6c280ccd3c/Untitled.png)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b0adac3a-b630-4aae-9922-80c62e51fad6/Untitled.png)
 
+Book component는 props로 name과 numOfPage를 받아서 이를 출력하는 component이다
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a11ba71e-adfe-4744-90f1-65bed05f3cae/Untitled.png)
 
+Library Component도 만들었다
 
-컴포넌트 만들기
-	
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8606b4dc-ae40-483d-b734-bafd0eae8d40/Untitled.png)
 
+index.js에서 Library component를 import 해오고
 
+render에 Library를 가져옴으로써 출력할 수 있다
 
+element (React Elements)
 
+요소
 
+react를 구성하는 가장 작은 블록들
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6e27019f-8a77-40b9-b080-e517d6aa5a47/Untitled.png)
 
+React Elements는 Dom Elements (실제 콘솔에서 보이는 Elements)의 가상 Elements라고 할 수 있다
 
-	public 폴더 안에 새롭게 pure.html이라는 파일과 header태그안에 내용을 집어넣은 상태
-	개발환경인 App.js에서 컴포넌트화 시키기
-1.	함수를 만든다 ex) Subject
-2.	원하는 내용을 return문 안에 넣는다
-3.	index.js가 실제로 받는 것은 App.js에서 App으로 설정해놨음으로 App함수안에 Subject 컴포넌트를 넣는다
-	
+React Elements는 JS의 객체 형태로 존재
 
+Elements는 Component의 유형과 속성 및 내부의 모든 자식에 대한 정보를 포함하고 있는 일반적인 JS 객체이다
 
+이 객체는 마음대로 바꿀 수 없는 불변성을 가지고 있음
 
+React Element = immutable
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c798b3e-35e5-4ac3-99eb-9601526b25d8/Untitled.png)
 
+     수정이 안됨으로
 
+새로운 element를 만들어 기존의 것과 바꿔 쓰면 된다
 
+Virtual DOM이기에 바꿔도 좋다
 
+Elements Rendering하기
 
-+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d4a5a7d6-3b26-4c9e-a3ca-b1fd698bf41c/Untitled.png)
 
+Virtual DOM 에서 실제 DOM으로 되는 모습
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fe067384-956d-47c5-b93a-7af8d88e4bb7/Untitled.png)
 
+이것도 tick이 나올때마다 새로운 element를 생성해 바꾸는 것이다
 
-App.js에 있는 다음과 같은 코드는 js가 아닌 jsx이다
-jsx로 코드를 작성하면 create react app이 js로 변환 해준다.
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0646a82f-4889-44d2-b5b9-083781b59cbb/Untitled.png)
 
-Props(속성)
+clock 만들기 실습이다
 
+new Date( )는 날짜와 시간을 얻기 위한 객체이다
 
-	
+toLocaleTimeString 메서드는 Date객체에서 날짜를 현재 지역 표기법으로 변환하여 가져온다
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b1e1061-dd0c-4d41-8a1a-d9747c53f7e5/Untitled.png)
 
+마찬가지로 import해오고 setInterval을 이용해 1초마다 새로고침되게 만든다
 
+리엑트 : Component-based
 
+컴포넌트들이 모여 페이지를 이룸
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45a378c1-a42f-423f-9fd5-5a66f7dd8a28/Untitled.png)
 
+JS 함수와 React component는 입력과 출력이 있는 비슷한 형태라고도 볼 수 있다
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/423367e0-3b59-4840-a02b-33ced616356e/Untitled.png)
 
+props를 넣어 component를 구성해 그 component로 element들을 만든다
 
-	기존의 방식의 component는 속성이 없다 하지만 props(속성)을 추가하면 
-	어떤 텍스트가 어떤 속성으로 있는지 알 수 있다.
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bc5d078a-d1ad-42e2-bf87-e1c86ee12ebc/Untitled.png)
 
+props가 재료고 재료에 따라 Element가 달라진다
 
+props : readonly
 
+바꿀 수 없음
 
+마찬가지로 새로운 컴포넌트를 만들면 됨
 
+pure함수와 impure함수
 
+pure함수
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/12c80adf-8358-44b6-a3ac-4b09feb94d5d/Untitled.png)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71d48e29-3b1d-4dca-8a82-a325211be587/Untitled.png)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e01f3f52-49be-45a9-b860-6135c952cf4f/Untitled.png)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef3ad622-ff1c-47bc-859a-4b9aa0ca366a/Untitled.png)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0289d14d-344b-4f1a-a9a9-59a1a6368c01/Untitled.png)
 
+App component가 나오고 그 안에 Profile 컴포넌트가 있다
 
+Profile안에는 3개의 속성들이 있다
 
+중괄호를 사용한 것은 JS고 따움표는 데이터다 / 중괄호로 넣어도 된다
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a58797c3-d627-4234-b6af-a73f1ef06d44/Untitled.png)
 
+Layout이라는 컴포넌트에 width height는 정수값이고
 
+header과 footer는 react element를 가지고 있다
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/064b7f0d-388b-4b03-a06f-bc9b672a591a/Untitled.png)
 
-또한 Subject라는 Component는 항상 <h1> WEB
-과 world wide web!을 출력하는 역할이였지만
+JS로 만들면 이렇게 되겠지만 JSX 쓰는 것을 추천한다
 
+children이 없기에 null을 썼고
 
+중괄호 안에는 props
 
+처음 Profile은 React component이다
 
+Component 만들기
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/474534b7-f5ce-45bf-a9dd-1e4e38123c82/Untitled.png)
 
+Class Component를 개선해서 만든  Function component(Hook 사용)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87c91e25-34eb-49b8-a3ca-d234a59ee182/Untitled.png)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4b92fff2-472b-41bf-a96e-9ef2139f458f/Untitled.png)
 
+React.Component라는 class를 상속받아서 Welcome이라는 class를 만듦
 
+Component는 대문자로
 
+Component 합성
 
+Component안에 또 다른 Component를 쓸 수 있음
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/299830b3-5db9-469a-9242-fc987c7a6943/Untitled.png)
 
+Welcome이라는 컴포넌트를 여러 번 씀
 
-다음과 같이 title과 sub의 내용을 바꾸면 재사용이 가능하다.
+여러 개 컴포넌트를 합쳐서 또다른 컴포넌트를 만드는 것을 컴포넌트 합성이라고 함
 
-Props & State
-	state는 porps의 값에 따라서 내부에 필요한 데이터
-	props와 state는 분리되어 있다
-	
-	render라는 메서드보다 먼저 실행되면서 component를 초기화 하고 싶을 때
-	constructor을 사용한다
-	
-	
+Component 추출
+
+재사용 가능한 component가 많아질수록 개발속도가 빨라짐
+
+jsx에서 style 적용법
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/75d0610c-0071-444e-9cdf-db4ace328b7c/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/449f62ac-facd-44ba-a84f-460b962e429a/Untitled.png)
+
+div 옆에 style = 만든 style과 이름을 적용
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e901883-03b4-4950-a59a-e4b86e081fa3/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7cdc9835-20f7-4f2f-81b9-52927be1df91/Untitled.png)
+
+props적용

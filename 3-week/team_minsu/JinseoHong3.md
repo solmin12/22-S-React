@@ -178,3 +178,56 @@ function withdraw(account, amount) {
 위 함수는 입력값을 바꾸기 때문에 순수함수가 아님.
 
 React에서는 모든 React 컴포넌트는 자신의 props 를 다룰 때 반드시 순수함수처럼 동작해야함.
+
+# State & Lifecycle
+
+[State and Lifecycle - React](https://ko.reactjs.org/docs/state-and-lifecycle.html)
+
+### State
+
+State: 리액트 컴포넌트의 변경 가능한 데이터.
+
+개발자가 정의
+
+렌더링이나 데이터 흐름에 사용되는 값만 포함시켜야함.
+
+state = JS 객체임
+
+```jsx
+class LikeButton extends React.Component{
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			liked: false
+		};
+	}
+	...
+}
+```
+
+cunstructor() → 클래스가 생성될 때 실행됨
+
+this.state로 현재 컴포넌트의 state 정의.
+
+state는 직접 수정하면 안됨. setState() 함수를 통해 수정해야함.
+
+### Life Cycle.
+
+리액트 컴포넌트의 생명주기. 생명주기 메서드들을 사용.
+
+- Mounting
+  - constructor 실행
+  - 컴포넌트 렌더링
+  - componentDidMount 함수 호출
+- Updating
+  - 변화를 겪으며 여러번 렌더링.
+  - 컴포넌트 props 변경
+  - setState 함수로 인해 state 변경
+  - forceUpdate 함수로 강제 컴포넌트 렌더링
+  - componentDidUpdate 함수 호출
+- Unmounting
+  - 상위 컴포넌트에서 현재 컴포넌트를 더이상 화면에 표시하지 않게 될 때
+  - 직전에 componuntWillUnmount 함수 호출.
+
+컴포넌트는 계속 존재하는 것이 아닌 시간의 흐름에 따라 생성되고 업데이트 되다가 사라진다.
