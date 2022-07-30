@@ -164,3 +164,86 @@ function Toggle(props) {
 ### Quiz
 1. Hook은 클래스 컴포넌트에서 호출 가능하다 (O/X)
 2. useCallback() Hook이 useMemo() Hook과 유사하지만 다른 점은?
+
+# Conditional Rendering
+- 조건에 따른 렌더링 (조건부 렌더링)
+- 어떠한 조건에 따라서 렌더링이 달라지는 것
+
+### Javascript의 Truthy와 Falsy
+- Truthy = true는 아니지만 true로 여겨지는 값  
+예시) [ ] (empty array), 42 (number, not zero)
+- Falsy =false는 아니지만 false로 여겨지는 값  
+예시) 0, -0 (zero, minus zero), Null, Undefined
+
+### inline component
+- 조건문을 코드 안에 집어넣는 것
+
+Inline If
+- if문의 경우 && 연산자를 사용
+- True && expression => expression  
+False && expression => false (쇼트서킷)
+- 예시
+```jsx
+function Counter(props) {
+	const count = 0;
+	return (
+		<div>
+			{count && <h1> 현재 카운트: {count} </h1>}
+		</div>
+	);
+}
+```
+Inline If-Else
+- 삼항연산자 ? 연산자를 사용
+- 조건문 ? true인 경우 : false인 경우
+- 예시
+```jsx
+function UserStatus(props) {
+	return (
+		<div>
+			이 사용자는 현재 <b> {props.isLoggedIn ? ‘로그인’ : ‘로그인하지 않은’}
+			</b> 상태입니다.
+		</div>
+	);
+}
+```
+Component 렌더링을 막는 방법
+- Null을 반환하면 component가 렌더링 되지 않음
+
+# List and keys
+### List와 array
+- List는 같은 아이템을 순서대로 모아놓은 것
+- Array 배열은 List를 위해 사용하는 자료구조이고 Javascript의 변수나 객체들을 하나의 변수로 묶어놓은 것
+
+### keys
+- 각 객체나 아이템을 구분할 수 있는 고유한 값
+- 아이템들을 구분하기 위한 고유한 문자열
+- 리액트에서의 key값은 같은 List에 있는 Elements사이에서만 고유한 값이면 된다
+- 즉, 속한 집단 내에서만 고유한 값이면 된다 (두 List 사이에 key가 같아도 상관없다)
+
+key값 지정
+1. Key로 값을 사용하는 경우  
+배열에 중복된 값이 포함된다면 key가 중복된다는 경고
+2. Key로 id를 사용하는 경우   
+3. key로 index를 사용하는 경우  
+default로 id가 없는 경우에만 사용 
+
+### map()
+- 여러 개의 component를 렌더링 하기 위해 사용
+- 배열에 들어있는 각 변수에 어떤 처리를 한 뒤 return하는 것
+- map() 안에는 key가 꼭 들어가야함 key가 없는 경우에는 경고가 뜬다
+- 예시
+```jsx
+const numbers = [1,2,3,4,5];
+const listItems = numbers.map((number) =>
+	<li> {number} </li>
+);
+ReactDOM.render(
+	<ul>{listItems}</ul>,
+	document.getElementById(‘root’)
+);
+```
+
+### Quiz-2
+1. 고유한 값을 나타내는 key값은 서로 다른 List끼리도 중복된 값이 있으면 안 된다. (O/X)
+2. inline if문의 False && expression에서 expression이 실행되지 않는 이유는?
