@@ -247,3 +247,52 @@ ReactDOM.render(
 ### Quiz-2
 1. 고유한 값을 나타내는 key값은 서로 다른 List끼리도 중복된 값이 있으면 안 된다. (O/X)
 2. inline if문의 False && expression에서 expression이 실행되지 않는 이유는?
+
+# Form
+- Form은 사용자로부터 입력을 받기 위해 사용
+- 리액트는 컴포넌트 내부에서 state를 통해 내부관리
+- HTML은 Element 내부에 각각의 state 존재
+
+### Controlled component
+- 리액트를 통해 사용자가 입력한 값을 접근하고 제어할 수 있음
+- 값이 리액트의 통제를 받는 Input Form Element
+- 모든 데이터를 setState()를 통해 state에서 관리
+- 사용자의 입력을 직접적으로 제어할 수 있음
+
+### 다양한 Forms
+Textarea 태그
+- 여러 줄에 걸쳐 긴 텍스트를 입력받기 위한 HTML 태그
+
+Select 태그
+- Drop-down 목록을 보여주기 위한 HTML 태그
+- 여러 개의 옵션 선택을 위해서는 multiple 사용  
+```jsx
+<select multiple={true} value = { [‘B’, ‘C’] }>
+```
+
+File input 태그
+- 디바이스의 저장 장치로부터 하나 또는 여러 개의 파일을 선택할 수 있게 해주는 HTML 태그
+- File input 태그는 read-only이기 때문에 읽기 전용  
+즉, uncontrolled component로 값이 리액트의 통제를 받지 않음
+
+### Multiple inputs
+- 하나의 컴포넌트에서 여러 개의 입력을 다루기 위해서 사용
+- 사용법은 여러 개의 state를 선언하여 각각의 입력에 대해 사용한다
+
+### Input null value
+- input에 value를 입력하면 고정값으로 되어있는데  
+이를 바꾸기 위해서는 value를 null로 반환한 뒤에  
+원하는 value 값을 입력할 수 있다
+
+# Lifting state up
+- 여러 개의 컴포넌트 사이에서 state를 공유하는 방법
+
+### Shared state
+- 하나의 데이터를 여러 개의 컴포넌트에서 표현해야 하는 경우 사용한다
+- 즉, 하위 컴포넌트의 state를 공통된 부모 컴포넌트로 끌어올려서 state를 적용
+- 공통적으로 사용하는 요소를 상위 컴포넌트로 올리기에 코딩을 효율적으로 가능
+- 리액트는 컴포넌트를 잘게 쪼개서 재사용가능한 형태로 개발하는 것이 중요하다
+
+### Quiz-3
+1. HTML과 리액트에서의 state 관리방법 차이는?
+2. Form 태그 중 uncontrolled component인 것은?
