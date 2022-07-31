@@ -36,3 +36,9 @@ assignees: ''
 
 ### 주요 개발 내용 2
 - 상세 개발 내용
+
+<!-- 
+    Issue 등록 전 작성 된 내용 꼭 확인할 것
+    Assignees에 자신 및 멘토 등록 
+    Label에 소속 팀 Label 추가
+-->
