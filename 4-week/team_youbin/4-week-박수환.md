@@ -185,3 +185,61 @@ const listItems = numbers.map((number) =>
 ```
 
 2. Mutiple Input을 제어하는 방법은?
+
+---------------
+
+### Shared State
+
+하위 컴포넌트가 공통된 부모 컴포넌트의 state를 공유하여 사용하는 것
+
+### Lifting State Up
+
+하위 컴포넌트의 state를 공통의 상위 컴포넌트로 올림
+
+### Composition vs Inheritance
+
+**Composition:** 여러개의 컴포넌트를 합쳐서 새로운 컴포넌트를 만드는 것
+
+Composition 기법
+
+- Containment: 하위 컴포넌트를 포함하는 형태의 합성 방법
+    
+    `props.children` 을 통해 하위 컴포넌트를 전달받음
+    
+    여러개의 children 집합이 필요할 때는 각각 새로운 props에 자식 컴포넌트를 정의
+    
+- Specialization: 범용 컴포넌트를 만들어 놓고 이를 특수화 시킨 컴포넌트를 만드는 합성 방법
+
+**Inheritance**: 다른 컴포넌트로부터 상속받아 새로운 컴포넌트를 만드는 것
+
+**복잡한 컴포넌트를 쪼개 여러 개의 컴포넌트로 만들고, 만든 컴포넌트들을 조합해 새로운 컴포넌트를 만든다.**
+
+### Context
+
+기존의 props를 통해 상위 컴포넌트에서 하위 컴포넌트로 데이터를 전달하는 방식은 여러 컴포넌트에 자주 사용되는 데이터를 전달할 때 반복적으로 코드를 작성해야한다.
+
+→ Context사용
+
+**Context 사용 고려**
+
+여러 개의 Component들이 접근해야 하는 데이터 
+
+ex)로그인 여부,정보, 현재 언어, UI 테마 등;
+
+**Context 사용 방법**
+
+```jsx
+// Context 생성
+const Context = React.createContext("기본값");
+
+// Context 사용
+fuction App(props){
+	return(
+		<Context.Provider value="a">
+				<Component />
+		</Context.Provide>
+```
+
+## Quiz - D3
+1. Composiotion의 Contaiment기법에서 여러 개의 children집합을 사용하는 방법은?
+2. Context 사용을 고려해야 하는 경우는 어떤 경우인가?
