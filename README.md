@@ -203,4 +203,4 @@
 ![TodoMVC](https://todomvc.com/site-assets/logo.svg)
 
 - 프로젝트 주제 : Todo List
-- 프로젝트 가이드 : [가이드 노션](https://coin-on-web.notion.site/coin-on-web/22-S-React-project-Guide-86bf562e6e554ccdad50bef66f2fd150)
+- 프로젝트 가이드 : <a href="https://coin-on-web.notion.site/coin-on-web/22-S-React-project-Guide-86bf562e6e554ccdad50bef66f2fd150/" target="_blank">가이드 노션</a>
