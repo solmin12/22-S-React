@@ -2,8 +2,8 @@
 
 ---
 
-- [x]  인프런 React 강의 Section8
-- [x]  추가 자료조사(binding)
+- [x] 인프런 React 강의 Section8
+- [x] 추가 자료조사(binding)
 
 ---
 
@@ -13,18 +13,14 @@ Event(사건) 특정 사건을 의미함 (ex 버튼을 클릭하는 이벤트), 
 
 ```jsx
 //DOM의 Event
-<button onclick="activate()">
-	Active
-</button>
+<button onclick="activate()">Active</button>
 ```
 
 DOM의 Event는 onclick을 통해 클릭 이벤트를 처리하고 문자열로 active()라는 함수를 넣음
 
 ```jsx
 //React의 Event
-<button onClick={activate}>
-	Activate
-</button>
+<button onClick={activate}>Activate</button>
 ```
 
 React의 Event는 onClick(camelCase)을 통해 클릭 이벤트를 처리하고 처리할 함수를 함수 그대로 전달함
@@ -64,7 +60,7 @@ let user = {
   firstName: "John",
   sayHi() {
     alert(`Hello, ${this.firstName}!`);
-  }
+  },
 };
 
 setTimeout(user.sayHi, 1000); // Hello, undefined!
@@ -108,15 +104,11 @@ Arrow Function은 명시적으로 두 번째 매개변수로 event를 넣은 반
 
 ```jsx
 //Function Component의 경우
-function MyButton(props){
-	const handleDelete = (id, event) => {
-		console.log(id, event.target);
-	};
+function MyButton(props) {
+  const handleDelete = (id, event) => {
+    console.log(id, event.target);
+  };
 
-	return (
-		<button onClick={(event) => handleDelete(1, event)}>
-			삭제하기
-		</button>
-	);
+  return <button onClick={(event) => handleDelete(1, event)}>삭제하기</button>;
 }
 ```
